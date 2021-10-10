@@ -72,13 +72,27 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# '''
+# 数据库更改，取消sqlite改为mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+# '''
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',       #数据库引擎
+#         'HOST':'localhost',                         #数据库主机
+#         'PORT':3306,                                #数据库端口
+#         'USER':'root',                      #数据库用户名
+#         'PASSWORD':'123456',                        #数据库密码
+#         'NAME': 'itchengcheng_blog'		            #数据库名字
+#     }
+# }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
 
 
 # Password validation
@@ -103,9 +117,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
